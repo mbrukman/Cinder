@@ -165,7 +165,7 @@ void ShadowMappingBasic::draw()
 	gl::clear( Color::black() );
 	gl::setMatrices( mCam );
 
-	gl::ScopedTextureBind texScope( mShadowMapTex, (uint8_t) 0 );
+	gl::ScopedTextureBind texScope( mShadowMapTex, 0 );
 
 	vec3 mvLightPos	= vec3( gl::getModelView() * vec4( mLightPos, 1.0f ) ) ;
 	mat4 shadowMatrix = mLightCam.getProjectionMatrix() * mLightCam.getViewMatrix();
