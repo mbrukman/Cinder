@@ -38,7 +38,7 @@ init( vec2 gravity_, int cell_nx, int cell_ny, float lx_)
 float Grid::
 CFL(void)
 {
-   float maxv2=std::max(h*gravity.length(), sqr(u.infnorm())+sqr(v.infnorm()));
+   float maxv2=std::max(h*glm::length(gravity), sqr(u.infnorm())+sqr(v.infnorm()));
    if(maxv2<1e-16) maxv2=1e-16;
    return h/sqrt(maxv2);
 }

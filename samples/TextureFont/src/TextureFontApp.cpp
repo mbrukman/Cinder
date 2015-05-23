@@ -1,9 +1,8 @@
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
-#include "cinder/gl/Texture.h"
+#include "cinder/gl/gl.h"
 #include "cinder/Text.h"
 #include "cinder/Rand.h"
-#include "cinder/gl/TextureFont.h"
 #include "cinder/Utilities.h"
 
 using namespace ci;
@@ -12,7 +11,6 @@ using namespace std;
 
 class TextureFontApp : public App {
   public:
-	void prepareSettings( Settings *settings ) { settings->enableMultiTouch( false ); }
 	void setup();
 	void mouseDown( MouseEvent event );
 	void keyDown( KeyEvent event );
