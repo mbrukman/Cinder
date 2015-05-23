@@ -37,9 +37,9 @@ void CaptureCubeApp::setup()
 		layout.clear( Color( 0.3f, 0.3f, 0.3f ) );
 		layout.setColor( Color( 1, 1, 1 ) );
 		layout.setFont( Font( "Arial", 96 ) );
-		layout.addCenteredLine( "No Webcam" );
+		layout.addCenteredLine( "No Camera" );
 		layout.addCenteredLine( "Detected" );
-		mTexture = gl::Texture2d::create( layout.render() );
+		mTexture = gl::Texture2d::create( layout.render(), gl::Texture2d::Format().loadTopDown() );
 	}
 	
 	mCam.lookAt( vec3( 3, 2, -3 ), vec3( 0 ) );
